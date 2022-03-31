@@ -1,2 +1,3 @@
 #!/bin/bash
 cp dir my_first_directory dir tmp
+cp dir my_first_directory file tmp
