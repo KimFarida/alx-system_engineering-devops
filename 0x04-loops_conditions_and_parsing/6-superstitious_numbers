@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 #Script that displays 1-20 using case
 
 i=0
@@ -16,4 +16,3 @@ while [ $((i++)) -lt 20 ]; do
 			;;
 	esac
 done
-
