@@ -1,13 +1,12 @@
- off password authentication and uses holberton key
- file_line { 'Turn off passwd auth':
-	   ensure => 'present',
-		    path   => '/etc/ssh/ssh_config',
-		      line   => '    PasswordAuthentication no',
- }
+# Turns off password authentication and uses school key
+file_line { 'Turn off passwd auth':
+	  ensure => 'present',
+		   path   => '/etc/ssh/ssh_config',
+		     line   => '    PasswordAuthentication no',
+}
 
 file_line { 'Declare identity file':
 	  ensure => 'present',
 		   path   => '/etc/ssh/ssh_config',
 		     line   => '    IdentityFile ~/.ssh/school',
 }
-
