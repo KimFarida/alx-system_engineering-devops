@@ -36,7 +36,7 @@ defaults
 frontend http_front
         bind *:80
         bind *:443 ssl crt /etc/letsencrypt/live/www.moflizzle.tech/fullchain.pem
-        http-request redirect scheme https unless { ssl_fc }
+        http-request redirect scheme https code 301 unless {ssl_fc }
         stats uri /haproxy?stats
         default_backend http_back
 
@@ -44,5 +44,3 @@ backend http_back
         balance roundrobin
         server 33255-web-01 18.206.83.156:80 check
         server 33255-web-02 3.84.161.150:80 check
-
-
